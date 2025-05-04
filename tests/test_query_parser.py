@@ -44,7 +44,7 @@ class TestSplitConditions:
         ],
     )
     def test_split_conditions(self, conditions_str, expected):
-        assert QueryParser._split_conditions(conditions_str) == expected
+        assert QueryParser.split_conditions(conditions_str) == expected
 
 
 class TestEvaluateCondition:
@@ -96,4 +96,4 @@ class TestParseValue:
         ],
     )
     def test_parse_value(self, value_str, expected):
-        assert QueryParser._parse_value(value_str) == expected
+        assert QueryParser.parse_value(value_str) == expected
