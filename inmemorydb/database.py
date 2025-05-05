@@ -18,7 +18,7 @@ class Database:
         self.logger.info(f"Database initialized with {len(data)} records")
 
     @staticmethod
-    def _clean_js_content(content: str) -> str:
+    def clean_js_content(content: str) -> str:
         """
         Clean JavaScript-style content to make it valid JSON.
         Args:
@@ -47,7 +47,7 @@ class Database:
             with open(file_path, "r") as f:
                 content = f.read()
 
-            cleaned_content = cls._clean_js_content(content)
+            cleaned_content = cls.clean_js_content(content)
 
             data = json.loads(cleaned_content)
             return cls(data)

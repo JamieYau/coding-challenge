@@ -1,6 +1,6 @@
 import logging
 from inmemorydb.database import Database
-from inmemorydb.output_formatter import OutputFormatter, OutputFormat
+from inmemorydb.output_formatter import OutputFormatter
 
 
 def setup_logging():

@@ -11,12 +11,12 @@ class TestInit:
 class TestCleanJsContent:
     def test_clean_js_content(self):
         content = 'var vessels = [{"test": "data"}];'
-        cleaned = Database._clean_js_content(content)
+        cleaned = Database.clean_js_content(content)
         assert cleaned == '[{"test": "data"}]'
 
     def test_clean_js_content_no_var(self):
         content = '[{"test": "data"}]'
-        cleaned = Database._clean_js_content(content)
+        cleaned = Database.clean_js_content(content)
         assert cleaned == content
 
 
